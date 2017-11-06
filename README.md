@@ -21,6 +21,8 @@
 ```csharp
   _juliet = new Juliet(DebugMode.Enable);
 ```
+### Set header request ###
+![Screenshot](https://s1.postimg.org/84un6xdjjz/image.png)
 
 ### Set optional header request ###
 ```csharp
