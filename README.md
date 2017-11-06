@@ -9,11 +9,7 @@
 * PC Standalone
 
 ## How do I get set up? ##
-1. Add Project to Unity
-* Pull the project
-* Open by IDE(such as Microsoft Visual Studio)
-
-2. Make a DLL file to Unity
+1. Add a DLL file to Unity Project
 
 ## Unity Version Support ##
 * 5.xx and above version
