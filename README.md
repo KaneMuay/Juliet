@@ -13,6 +13,7 @@
 
 ## Unity Version Support ##
 * 5.xx and above version
+* Run on .NET 4.6
 
 ## How To Use ##
 
