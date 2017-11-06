@@ -61,6 +61,9 @@ Data will return json string format, you can serialize json format to object cla
     }
 ```
 
+### Warning ###
+at currently still not support PATCH method, it will be update on next version.
+
 ## License
 Juliet-Unity-Web-Request-API is licensed under the MIT license:
 www.opensource.org/licenses/MIT
