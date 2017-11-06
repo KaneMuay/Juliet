@@ -1,6 +1,7 @@
 # README #
 
-Juliet is a Unity3D plugin for connect to API Server.
+## Juliet-Unity-Web-Request-API
+*Juliet-Unity-Web-Request-API is a Unity3D plugin for request API data with support REST API
 
 ## Support Device ##
 * Android
