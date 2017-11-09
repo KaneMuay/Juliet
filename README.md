@@ -29,7 +29,7 @@ https://github.com/KaneMuay/Juliet-Unity-Web-Request-Core
 
 ### Set optional header request ###
 ```csharp
-  JulietConfigure.Instance.SetOptionalKeyHeader("X-Access-Token", "X-User");
+  JulietConfigure.Instance.SetOptionalKeyHeader("Access-Token", "User-Token");
   JulietConfigure.Instance.SetOptionalValueHeader(accessToken, id);
   JulietConfigure.Instance.UpdateHeader();
 ```
@@ -51,13 +51,27 @@ https://github.com/KaneMuay/Juliet-Unity-Web-Request-Core
      .Send(OnRequestCharacter, FailCallback ?? OnRequestFailed);
 ```
 
+### Calling API Request Texture
+```csharp
+    _juliet.Request.Texture()
+      .SetURL("https://s1.postimg.org/9dmeg5tyf3/image.png")
+      .Send(OnGetTexture, OnRequestFailed);
+```
+
 ### Checking Response ###
 
-Data will return json string format, you can serialize json format to object class.
+Data will return json string format, you can serialize json format to object class or return Texture
 ```csharp
    public void OnRequestFailed(string result)
     {
         ResponseMessage response = JsonUtility.FromJson<ResponseMessage>(result);
+    }
+```
+
+```csharp
+   public void OnGetTexture(Texture texture)
+    {
+        // TODO somthing on texture
     }
 ```
 
