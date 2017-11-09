@@ -23,18 +23,25 @@ public class TestJuliet : MonoBehaviour
 
     public void Login()
     {
-        _juliet.Request.LoginRequest()
+        _juliet.Request.Login()
             .SetURL("www.google.co.th", MethodType.POST)
-            .SetUsername("username")
-            .SetPassword("password")
+            .SetUsername("usernameKey", "usernameValue")
+            .SetPassword("passwordKey", "passwordValue")
             .Send(OnLogin, OnLoginFailed);
     }
 
     public void LoadCharacter()
     {
-        _juliet.Request.CommonRequest()
+        _juliet.Request.Common()
             .SetURL("www.google.co.th", MethodType.GET)
             .Send(OnLoadCharacter, OnRequestFailed);
+    }
+
+    public void LoadTexture()
+    {
+        _juliet.Request.Texture()
+            .SetURL("www.google.co.th")
+            .Send(OnLoadTexture, OnRequestFailed);
     }
 
     private void OnLogin(string result)
@@ -55,5 +62,10 @@ public class TestJuliet : MonoBehaviour
     private void OnRequestFailed(string result)
     {
         JulietLogger.Info(TAG, result);
+    }
+
+    private void OnLoadTexture(Texture result)
+    {
+        JulietLogger.Info(TAG, result.name);
     }
 }
