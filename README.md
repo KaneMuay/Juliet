@@ -36,7 +36,7 @@ https://github.com/KaneMuay/Juliet-Unity-Web-Request-Core
 
 ### Calling API Login ###
 ```csharp
-   _juliet.Request.LoginRequest()
+   _juliet.Request.Login()
      .SetURL("https://api-server.com/auth/login", MethodType.POST)
      .SetUsername("username", request.username)
      .SetPassword("password", request.password)
@@ -46,7 +46,7 @@ https://github.com/KaneMuay/Juliet-Unity-Web-Request-Core
 
 ### Calling API Request Data ###
 ```csharp
-   _juliet.Request.CommonRequest()
+   _juliet.Request.Common()
      .SetURL("https://api-server.com/characters/{0}", MethodType.GET, characterId)
      .Send(OnRequestCharacter, FailCallback ?? OnRequestFailed);
 ```
