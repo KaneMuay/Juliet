@@ -38,9 +38,9 @@ https://github.com/KaneMuay/Juliet-Unity-Web-Request-Core
 ```csharp
    _juliet.Request.LoginRequest()
      .SetURL("https://api-server.com/auth/login", MethodType.POST)
-     .SetUsername(request.username)
-     .SetPassword(request.password)
-     .SetRefreshToken(request.refreshToken)
+     .SetUsername("username", request.username)
+     .SetPassword("password", request.password)
+     .SetEventAttribute("refreshToken", request.refreshToken)
      .Send(OnLogin, OnLoginFailed);
 ```
 
