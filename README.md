@@ -25,7 +25,7 @@ https://github.com/KaneMuay/Juliet-Unity-Web-Request-Core
   _juliet = new Juliet(DebugMode.Enable);
 ```
 ### Set header request ###
-![Screenshot](https://www.picz.in.th/image/fFX0ja)
+![Screenshot](https://www.picz.in.th/images/2018/09/25/fFX0ja.png)
 
 ### Set optional header request ###
 ```csharp
