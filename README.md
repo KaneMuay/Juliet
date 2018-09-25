@@ -27,11 +27,19 @@ https://github.com/KaneMuay/Juliet-Unity-Web-Request-Core
 ### Set header request ###
 ![Screenshot](https://www.picz.in.th/images/2018/09/25/fFX0ja.png)
 
-### Set optional header request ###
+### Calling API Upload Image ###
 ```csharp
-  JulietConfigure.Instance.SetOptionalKeyHeader("Access-Token", "User-Token");
-  JulietConfigure.Instance.SetOptionalValueHeader(accessToken, id);
-  JulietConfigure.Instance.UpdateHeader();
+        ImageType imageType = new ImageType()
+        {
+            imgBytes = imgBytes,
+            filename = "Filename.png",
+            mineType = "image/png"
+        };
+
+        new Juliet(DebugMode.Enable).Request.Common()
+            .SetURL(serverURL, MethodType.POST)
+            .SetEventImageAttribute("image-key", imageType)
+            .SendWithImage(Success, Failed);
 ```
 
 ### Calling API Login ###
