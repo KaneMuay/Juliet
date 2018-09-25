@@ -29,17 +29,17 @@ https://github.com/KaneMuay/Juliet-Unity-Web-Request-Core
 
 ### Calling API Upload Image ###
 ```csharp
-        ImageType imageType = new ImageType()
-        {
-            imgBytes = imgBytes,
-            filename = "Filename.png",
-            mineType = "image/png"
-        };
+  ImageType imageType = new ImageType()
+  {
+      imgBytes = imgBytes,
+      filename = "Filename.png",
+      mineType = "image/png"
+  };
 
-        new Juliet(DebugMode.Enable).Request.Common()
-            .SetURL(serverURL, MethodType.POST)
-            .SetEventImageAttribute("image-key", imageType)
-            .SendWithImage(Success, Failed);
+  _juliet.Request.Common()
+      .SetURL(serverURL, MethodType.POST)
+      .SetEventImageAttribute("image-key", imageType)
+      .SendWithImage(Success, Failed);
 ```
 
 ### Calling API Login ###
