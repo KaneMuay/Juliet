@@ -72,6 +72,14 @@ Data will return json string format, you can serialize json format to object cla
 ```csharp
    public void OnRequestFailed(string result)
     {
+        // TODO Failed response
+    }
+```
+
+```csharp
+   public void OnRequestSuccess(string result)
+    {
+        // TODO Success response
         ResponseMessage response = JsonUtility.FromJson<ResponseMessage>(result);
     }
 ```
@@ -79,7 +87,7 @@ Data will return json string format, you can serialize json format to object cla
 ```csharp
    public void OnGetTexture(Texture texture)
     {
-        // TODO somthing on texture
+        // TODO Success response Texture
     }
 ```
 
